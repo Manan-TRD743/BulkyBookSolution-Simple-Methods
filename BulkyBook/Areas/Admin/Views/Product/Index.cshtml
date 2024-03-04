@@ -1,0 +1,41 @@
+﻿@using BulkyBookModel
+@model List<ProductModel>
+<div class="card shadow borderborder-0 mt-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-3">
+        <div class="col-12 text-center">
+            <h2 class="text-white py-2">Product List</h2>
+            <hr />
+        </div>
+    </div>
+</div>
+
+<div class="card-body p-4 mb-4">
+    <div class="row pb-3">  
+        <div class="col-6"> 
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Product" asp-action="UpsertProduct" class="btn" style="background-color:#3A595C">
+                <i class="bi bi-plus-circle" style="font-style : normal; color: white;"> Create New Product</i>
+            </a>
+        </div>
+    </div>
+
+
+    <table id="tblData" class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>ISBN</th>
+                <th>Price</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
+
+</div>
+
+@section Scripts{
+    <script src="~/js/GetProduct.js"></script>
+}
